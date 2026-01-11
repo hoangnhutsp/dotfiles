@@ -6,7 +6,7 @@ local brightness = 0.03
 
 -- image setting
 local home = os.getenv("HOME")
-local background_folder = home .. "/bg"
+local background_folder = home .. "/dotfiles/bg"
 local function pick_random_background(folder)
     local handle = io.popen('ls "' .. folder .. '"')
     if handle ~= nil then
@@ -33,7 +33,7 @@ config.window_background_image_hsb = {
 }
 
 -- default background
-local bg_image = home .. "/.config/nvim/bg/02.png"
+local bg_image = home .. "/dotfiles/bg/default.png"
 
 config.window_background_image = bg_image
 -- end image setting
@@ -50,7 +50,7 @@ config.window_padding = {
 
 config.color_scheme = "Tokyo Night"
 config.font = wezterm.font("Inconsolata Nerd Font Mono", { weight = "Medium", stretch = "Expanded" })
-config.font_size = 14
+config.font_size = 20
 
 -- config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
