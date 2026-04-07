@@ -11,7 +11,6 @@ alias reload="source ~/.zshrc"
 alias vim='nvim'
 alias v='nvim'
 alias vi='nvim'
-alias slotty_cleanlog='cd "/home/tranghoangnhut/go/src/slotty" && find . -type f -name "*.log" -print -delete'
 
 
 # fzf
