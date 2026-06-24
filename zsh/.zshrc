@@ -11,7 +11,6 @@ alias reload="source ~/.zshrc"
 alias vim='nvim'
 alias v='nvim'
 alias vi='nvim'
-alias slotty_cleanlog='cd "/home/tranghoangnhut/go/src/slotty" && find . -type f -name "*.log" -print -delete'
 
 
 # fzf
@@ -35,6 +34,14 @@ export GOMODULE=1
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.local/bin:$PATH
 
+export KUBECONFIG=$HOME/.kube/config
+
 eval "$(zoxide init zsh)"
 
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completionexport PATH=$PATH:$HOME/.dotnet
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

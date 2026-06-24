@@ -5,6 +5,8 @@ local io = require("io")
 local os = require("os")
 local brightness = 0.03
 
+config.enable_wayland = false
+config.front_end = "Software"
 -- image setting
 local home = os.getenv("HOME")
 local background_folder = home .. "/dotfiles/bg"
@@ -118,12 +120,11 @@ config.window_background_image_hsb = {
 }
 
 -- default background
-local bg_image = home .. "/dotfiles/bg/default.png"
+local bg_image = home .. "/dotfiles/bg/02.png"
 
 config.window_background_image = bg_image
 
 config.window_background_opacity = 1
-config.macos_window_background_blur = 85
 config.window_padding = {
     left = 4,
     right = 4,
