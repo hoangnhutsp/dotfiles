@@ -239,4 +239,12 @@ config.keys = {
 config.default_cursor_style = "BlinkingUnderline"
 config.cursor_thickness = 1
 config.max_fps = 60
+
+config.default_prog = {
+  "/bin/bash",
+  "-lc",
+  "exec tmux new-session -A -s main",
+}
+
+
 return config
