@@ -24,6 +24,9 @@ install_macos() {
   echo "Installing for macOS..."
   # Add macOS-specific installation commands here
   # Example: brew install some-package
+
+  defaults write com.apple.finder _FXShowPosixPathInTitle -bool NO
+  killall Finder
 }
 
 case "$OS" in
