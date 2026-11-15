@@ -14,8 +14,7 @@ install_macos() {
     exit 1
   fi
 
-  brew install stow tmux neovim fzf bat zoxide kubectl go nvm
-  brew install --cask wezterm font-inconsolata-nerd-font temurin@21
+  brew bundle install --file="$DOTFILES_DIR/Brewfile"
 
   mkdir -p "$HOME/.tmux/plugins"
   if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
