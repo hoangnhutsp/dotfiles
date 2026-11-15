@@ -14,6 +14,12 @@ install_macos() {
     exit 1
   fi
 
+  # Adopt an existing manual iTerm install so `brew bundle` doesn't try to
+  # install over an app bundle it doesn't already manage.
+  if [ -d "/Applications/iTerm.app" ] && ! brew list --cask iterm2 >/dev/null 2>&1; then
+    brew install --cask --adopt iterm2
+  fi
+
   brew bundle install --file="$DOTFILES_DIR/Brewfile"
 
   mkdir -p "$HOME/.tmux/plugins"
