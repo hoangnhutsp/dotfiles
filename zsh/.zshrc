@@ -11,7 +11,10 @@ alias reload="source ~/.zshrc"
 alias vim='nvim'
 alias v='nvim'
 alias vi='nvim'
-
+alias python='python3'
+alias k='kubectl'
+alias pip=pip3
+alias about='system_profiler SPHardwareDataType'
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -20,15 +23,14 @@ source <(fzf --zsh)
 alias f=fzf
 alias fp='fzf --preview="bat --color=always {}"'
 alias fv='nvim $(fzf -m --preview="bat --color=always {}")'
+alias k=kubectl
 
 alias bootstraps='~/dotfiles/scripts/tmux-init.sh'
 
-export GOBIN=$HOME/go/bin
-export GOPATH=$HOME/go
-export GOROOT='/usr/local/go'
-export PATH=$PATH:$GOROOT/bin:$GOBIN
-export GOPROXY=https://proxy.golang.org,direct
-export GOMODULE=1
+# Go configuration
+export GOPATH="$HOME/go"
+export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
+export GOTOOLCHAIN=auto
 
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.local/bin:$PATH
@@ -40,3 +42,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+export KUBECONFIG=$HOME/.kube/homelab
+
+export JAVA_HOME=$(/usr/libexec/java_home -v 21)
+export PATH="$JAVA_HOME/bin:$PATH"

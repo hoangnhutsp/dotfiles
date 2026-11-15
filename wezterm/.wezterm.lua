@@ -118,7 +118,7 @@ config.window_background_image_hsb = {
 }
 
 -- default background
-local bg_image = home .. "/dotfiles/bg/default.png"
+local bg_image = home .. "/dotfiles/bg/02.png"
 
 config.window_background_image = bg_image
 
