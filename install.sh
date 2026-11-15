@@ -45,7 +45,8 @@ install_macos() {
       "$HOME/.nvm/bash_completion"
   fi
 
-  (cd "$DOTFILES_DIR" && stow --target="$HOME" zsh tmux wezterm)
+  (cd "$DOTFILES_DIR" && stow --target="$HOME" zsh tmux)
+  python3 "$DOTFILES_DIR/iterm2/install-profiles.py" "$DOTFILES_DIR/bg"
 
   defaults write com.apple.finder _FXShowPosixPathInTitle -bool NO
   killall Finder

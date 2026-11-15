@@ -28,4 +28,4 @@ brew "zoxide"
 brew "zsh"
 
 cask "ngrok"
-cask "wezterm"
+cask "iterm2"
